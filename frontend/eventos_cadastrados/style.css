@@ -220,6 +220,12 @@ h1 {
     transform: scale(1.05);
 }
 
+.btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .status-badge {
     position: absolute;
     top: 20px;
@@ -245,6 +251,7 @@ h1 {
     color: white;
 }
 
+/*
 .add-event-btn {
     position: fixed;
     bottom: 40px;
@@ -264,6 +271,7 @@ h1 {
 .add-event-btn:hover {
     transform: scale(1.1) rotate(90deg);
 }
+*/
 
 .no-events {
     text-align: center;
@@ -296,10 +304,12 @@ h1 {
         width: 100%;
     }
 
+    /*
     .add-event-btn {
         bottom: 20px;
         right: 20px;
     }
+    */
 
     .back-button {
         position: static;
