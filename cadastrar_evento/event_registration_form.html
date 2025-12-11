@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se - Evento</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="left-section">
+        <div class="language-selector">Português (Brasil)</div>
+        
+        <div class="illustration">
+            <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+                <!-- Ilustração simplificada de pessoa -->
+                <ellipse cx="100" cy="50" rx="25" ry="30" fill="#FFB6B9"/>
+                <rect x="75" y="80" width="50" height="70" rx="25" fill="#1a1a3e"/>
+                <rect x="70" y="100" width="30" height="50" rx="15" fill="#667eea"/>
+                <rect x="100" y="100" width="30" height="50" rx="15" fill="#667eea"/>
+                <rect x="60" y="150" width="80" height="100" rx="10" fill="#1a1a3e"/>
+                <rect x="55" y="240" width="30" height="35" rx="8" fill="#1a1a3e"/>
+                <rect x="115" y="240" width="30" height="35" rx="8" fill="#1a1a3e"/>
+                <rect x="105" y="110" width="25" height="35" rx="5" fill="#667eea"/>
+                <circle cx="100" cy="130" r="12" fill="#FFB6B9"/>
+            </svg>
+        </div>
+
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-circle"></div>
+                <div class="feature-bar filled"></div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-circle"></div>
+                <div class="feature-bar"></div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-circle"></div>
+                <div class="feature-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <div class="help-link">
+            <a href="#">Ajuda</a>
+        </div>
+
+        <h1>Cadastre-se</h1>
+
+        <form>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="eventName">Nome do Evento</label>
+                    <input type="text" id="eventName" placeholder="Digite aqui" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventType">Tipo do Evento</label>
+                    <select id="eventType" required>
+                        <option value="">Selecione</option>
+                        <option value="conferencia">Conferência</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="seminario">Seminário</option>
+                        <option value="palestra">Palestra</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="targetAudience">Público Alvo</label>
+                    <input type="text" id="targetAudience" placeholder="Digite aqui" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="coordinatorEmail">Email do coordenador</label>
+                    <input type="email" id="coordinatorEmail" placeholder="Digite aqui" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Início</label>
+                    <div class="date-time-group">
+                        <select required>
+                            <option value="">Dia</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <select required>
+                            <option value="">Mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                        </select>
+                        <select required>
+                            <option value="">Ano</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Fim</label>
+                    <div class="date-time-group">
+                        <select required>
+                            <option value="">Dia</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <select required>
+                            <option value="">Mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                        </select>
+                        <select required>
+                            <option value="">Ano</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="eventDescription">Descrição do Evento</label>
+                    <textarea id="eventDescription" placeholder="Digite aqui" required></textarea>
+                </div>
+            </div>
+
+            <button id="btn-close" onclick="window.location.href='../index.html'">Voltar</button>
+
+            <button type="submit">Concluir</button>
+        </form>
+    </div>
+</body>
+</html>

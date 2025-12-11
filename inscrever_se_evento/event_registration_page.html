@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscreva-se no Evento</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="left-section">
+        <div class="language-selector">Português (Brasil)</div>
+        
+        <div class="illustration">
+            <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+                <!-- Pessoa sentada com laptop -->
+                <ellipse cx="90" cy="50" rx="30" ry="35" fill="#1a1a1a"/>
+                <ellipse cx="70" cy="55" rx="25" ry="30" fill="#1a1a1a"/>
+                <ellipse cx="110" cy="60" rx="20" ry="25" fill="#1a1a1a"/>
+                <circle cx="90" cy="65" r="25" fill="#FFB6B9"/>
+                
+                <ellipse cx="90" cy="130" rx="50" ry="65" fill="#667eea"/>
+                
+                <ellipse cx="50" cy="150" rx="16" ry="40" fill="#FFB6B9" transform="rotate(-20 50 150)"/>
+                <rect x="35" y="180" width="28" height="45" rx="14" fill="#1a1a1a" transform="rotate(-15 50 200)"/>
+                
+                <ellipse cx="130" cy="150" rx="16" ry="40" fill="#FFB6B9" transform="rotate(20 130 150)"/>
+                <rect x="116" y="180" width="28" height="45" rx="14" fill="#1a1a1a" transform="rotate(15 130 200)"/>
+                
+                <rect x="70" y="190" width="75" height="45" rx="3" fill="#e0e0e0"/>
+                <rect x="75" y="195" width="65" height="35" rx="2" fill="#333"/>
+                <line x1="107" y1="235" x2="107" y2="190" stroke="#999" stroke-width="2"/>
+                
+                <rect x="60" y="190" width="60" height="75" rx="30" fill="#1a1a1a"/>
+                
+                <ellipse cx="70" cy="265" rx="18" ry="10" fill="#1a1a1a"/>
+                <ellipse cx="110" cy="265" rx="18" ry="10" fill="#1a1a1a"/>
+            </svg>
+        </div>
+
+        <div class="checklist-card">
+            <div class="checklist-hook"></div>
+            <div class="checklist-grid">
+                <div class="checklist-item checked">✓</div>
+                <div class="checklist-item video">🎥</div>
+                <div class="checklist-item empty"></div>
+                <div class="checklist-item checked">✓</div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-circle"></div>
+                <div class="feature-bar filled"></div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-circle"></div>
+                <div class="feature-bar"></div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-circle"></div>
+                <div class="feature-bar"></div>
+            </div>
+        </div>
+
+        <div class="decorative-shape"></div>
+    </div>
+
+    <div class="right-section">
+        <div class="help-link">
+            <a href="#">Ajuda</a>
+        </div>
+
+        <h1>Inscreva-se no evento</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="fullName">Nome Completo</label>
+                <input type="text" id="fullName" placeholder="Digite aqui" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite aqui" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmEmail">Confirme o email</label>
+                <input type="email" id="confirmEmail" placeholder="Digite aqui" required>
+            </div>
+
+            <button id="btn-close" onclick="window.location.href='../index.html'">Voltar</button>
+            <button type="submit">Concluir</button>
+        </form>
+    </div>
+</body>
+</html>

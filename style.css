@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.calendar-container {
+    position: relative;
+}
+
+.calendar-title {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: 10;
+}
+
+.calendar-title h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-title .highlight {
+    color: #a78bfa;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 15px;
+    position: relative;
+}
+
+.calendar-cell {
+    background: rgba(167, 139, 250, 0.3);
+    border: 3px solid #5b21b6;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.calendar-cell:hover {
+    background: rgba(167, 139, 250, 0.5);
+    transform: scale(1.05);
+}
+
+.actions-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 25px;
+}
+
+.btn {
+    width: 280px;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: rgba(255, 255, 255, 0.95);
+    color: #5b21b6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    display: flex;
+    gap: 5px;
+}
+
+.logo-square {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+.logo-square.red {
+    background: #e74c3c;
+}
+
+.logo-square.green {
+    background: #2ecc71;
+}
+
+.logo-square.blue {
+    background: #3498db;
+}
+
+.logo-text {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.logo-subtext {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.75rem;
+}
+
+@media (max-width: 968px) {
+    body {
+        flex-direction: column;
+    }
+
+    .calendar-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(5, 70px);
+        gap: 10px;
+    }
+
+    .calendar-title {
+        top: 30px;
+        left: 30px;
+    }
+
+    .btn {
+        width: 250px;
+    }
+
+    .logo {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .calendar-section {
+        padding: 20px;
+    }
+
+    .calendar-title h1 {
+        font-size: 2rem;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(5, 50px);
+        gap: 8px;
+    }
+
+    .calendar-title {
+        top: 20px;
+        left: 20px;
+    }
+
+    .btn {
+        width: 220px;
+        font-size: 1rem;
+        padding: 15px 30px;
+    }
+}

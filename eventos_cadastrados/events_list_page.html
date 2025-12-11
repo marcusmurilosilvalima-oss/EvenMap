@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Cadastrados</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button" onclick="window.location.href='../index.html'">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <h1>Eventos Cadastrados</h1>
+            <p class="subtitle">Visualize e gerencie todos os seus eventos</p>
+        </header>
+
+        <div class="filters">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar eventos..." onkeyup="filterEvents()">
+            </div>
+            <select class="filter-select" id="typeFilter" onchange="filterEvents()">
+                <option value="">Todos os tipos</option>
+                <option value="conferencia">Conferência</option>
+                <option value="workshop">Workshop</option>
+                <option value="seminario">Seminário</option>
+                <option value="palestra">Palestra</option>
+            </select>
+            <select class="filter-select" id="statusFilter" onchange="filterEvents()">
+                <option value="">Todos os status</option>
+                <option value="upcoming">Em breve</option>
+                <option value="active">Em andamento</option>
+                <option value="finished">Finalizado</option>
+            </select>
+        </div>
+
+        <div class="events-grid" id="eventsGrid">
+            <!-- Os eventos serão renderizados aqui pelo JavaScript -->
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <p>Nenhum evento encontrado com os filtros selecionados.</p>
+        </div>
+    </div>
+
+    <button class="add-event-btn" title="Adicionar novo evento" onclick="window.location.href='../inscrever_se_evento/event_registration_page.html'">+</button>
+
+    <!-- Modal de Detalhes -->
+    <div class="modal" id="eventModal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" onclick="closeModal()">×</button>
+                <span class="event-type" id="modalType"></span>
+                <h2 class="event-title" id="modalTitle"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="detail-section">
+                    <div class="detail-label">📅 Data e Hora</div>
+                    <div class="detail-value" id="modalDate"></div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-label">📍 Local</div>
+                    <div class="detail-value" id="modalLocation"></div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-label">👥 Público Alvo</div>
+                    <div class="detail-value" id="modalAudience"></div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-label">📧 Coordenador</div>
+                    <div class="detail-value" id="modalCoordinator"></div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-label">📝 Descrição Completa</div>
+                    <div class="detail-value" id="modalDescription"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
