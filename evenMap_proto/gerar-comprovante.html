@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Comprovante — evenMap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h2>Gerar Comprovante de Participação</h2>
+
+        <input class="input" type="text" placeholder="Nome ou ID do usuário">
+        <input class="input" type="text" placeholder="Nome do evento">
+
+        <button class="btn" onclick="mostrarLink()">Gerar Link</button>
+
+        <p id="resultado" style="margin-top:20px;"></p>
+    </div>
+</div>
+
+<script>
+function mostrarLink() {
+    document.getElementById('resultado').innerHTML =
+    "Link gerado: <a href='proof.html?token=12345'>Comprovante</a>";
+}
+</script>
+
+</body>
+</html>
